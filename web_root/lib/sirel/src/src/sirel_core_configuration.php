@@ -16,8 +16,14 @@
 // relase version of the application.
 //-------------------------------------------------------------------------
 
-//sirelSiteConfig::$debug_PHP=TRUE;
-sirelSiteConfig::$debug_PHP=FALSE;
+sirelSiteConfig::$debug_PHP=TRUE; // wappskafandr_t2 copy specific dirty mockery
+// The thing is that some selftests or functions run fine, 
+// if the debug version is switched in, but fail in non-debug mode.
+// Since that's not even the official release of the Sirel PHP library,
+// one can do a dirty hack like that here. 
+
+
+//sirelSiteConfig::$debug_PHP=FALSE;
 //sirelSiteConfig::$debug_JavaScript=TRUE;
 sirelSiteConfig::$debug_JavaScript=FALSE;
 
