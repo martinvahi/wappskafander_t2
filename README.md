@@ -46,7 +46,7 @@ contains a few simplistic run-time parameters.
 
     php-cgi -b 127.0.0.1:<the port from the config file>
 
-starts the PHP FastCGI server at port <the port from the config file>.
+starts the PHP FastCGI server at port the_port_from_the_config_file.
 An example of the iptables rule:
 
     iptables --append INPUT ! --source 127.0.0.1 --protocol tcp --destination-port 5555 -j DROP
