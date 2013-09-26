@@ -12,9 +12,9 @@ stand-alone applications.
 wappskafander_t2 is POSIX-specific and will probably never be
 supported on Windows.
 
-Project home:
+Project home: http://technology.softf1.com/wappskafander_t2/
 
-http://technology.softf1.com/wappskafander_t2/
+Honorable mention: http://www.hiawatha-webserver.org/
 
 
 ---------------------------------------------------------------------------
@@ -47,7 +47,7 @@ contains a few simplistic run-time parameters.
     php-cgi -b 127.0.0.1:<the port from the config file>
 
 starts the PHP FastCGI server at port the_port_from_the_config_file.
-An example of the iptables rule:
+An example of an iptables rule:
 
     iptables --append INPUT ! --source 127.0.0.1 --protocol tcp --destination-port 5555 -j DROP
 

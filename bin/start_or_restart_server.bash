@@ -73,11 +73,12 @@ S_WS_LINK_NAME="wappskafander_t2_$S_SUFFIX_1"
 # grep parameter, "wappblabla", 
 # is converted to [w][a][p][p][b][l][a][b][l][a][b][l][a]
 S_TMP_1="`$S_FP_RUBY -e \"s=\\\"$S_WS_LINK_NAME\\\";s_0=\\\"\\\"; s.length.times{|i| s_0<<(\\\"[\\\"+s[i..i]+\\\"]\\\")}; puts(s_0)\"`"
-S_TMP_2="`ps -A w w | grep -E $S_TMP_1 | awk '{ gsub(/[^0-9].+/, ""); print }'`"
+S_TMP_2="`ps -A w w | grep -E $S_TMP_1 | awk '{ gsub(/^[^0-9]+/, ""); print }' | awk '{ gsub(/[^0-9].+/, ""); print } '`"
 if [ "$S_TMP_2" != "" ]; then
     kill -s 5 $S_TMP_2
     sleep 1s
-    S_TMP_2="`ps -A w w | grep -E $S_TMP_1 | awk '{ gsub(/[^0-9].+/, ""); print }'`"
+    # Rechecks, if the process is still alive.
+    S_TMP_2="`ps -A w w | grep -E $S_TMP_1 | awk '{ gsub(/^[^0-9]+/, ""); print }' | awk '{ gsub(/[^0-9].+/, ""); print } '`"
     if [ "$S_TMP_2" != "" ]; then
         kill -s 9 $S_TMP_2
     fi
