@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Error 503</title>
+	<style type="text/css">
+		body {
+			margin:20;
+			padding:0;
+		}
+	</style>
+
+	<style type="text/css">
+		.center_t1 {text-align:center;}
+	</style>
+</head>
+
+<body id="the_document_body" class="yui-skin-sam">
+	<div class="center_t1">
+		<br />
+		<h1>HTTP Error <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_Error">503</a><br/>Service Unavailable</h1>
+		<br />
+		The current copy of the
+		<a href="http://technology.softf1.com/wappskafander_t2/">wappskafander_t2</a>,
+		version WAPPSKAFANDER_T2_BLANK_WAPPSKAFANDER_T2_VERSION,<br/>
+		has been configured (from the wappskafander_t2 configurations file)
+		to run PHP scripts.
+		<br /><br />
+		It is probable that the HTTP error, 503, is caused by <br/>
+                the fact that the PHP
+		<a href="http://www.fastcgi.com/">FastCGI</a> server is
+		NOT running at
+		<br /><br />
+                WAPPSKAFANDER_T2_BLANK_PHPFASTCGI_IP_ADDRESS_AND_PORT .
+		<br /><br />
+		The PHP FastCGI server should be shielded by a firewall to
+		allow only wappskafander_t2 to access it.
+		A <a href="http://tldp.org/LDP/abs/html/">Bash</a> script that
+		starts the PHP FastCGI server and configures the
+		<a href="http://www.netfilter.org/">firewall</a>:
+		<br />
+		<pre style="color:#00A000;">
+php-cgi -b WAPPSKAFANDER_T2_BLANK_PHPFASTCGI_IP_ADDRESS_AND_PORT 
+		</pre>
+		<br /><br /><br /><br />
+	</div>
+</html>
+

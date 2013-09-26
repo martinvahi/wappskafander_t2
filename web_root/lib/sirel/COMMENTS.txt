@@ -1,0 +1,190 @@
+===========================================================================
+=========================  Sirel PHP Library  ============================
+===========================================================================
+
+A word "sirel" stands for "lilac" in Estonian.
+
+The Sirel PHP library is a general mixture of various PHP components
+that one might find useful, when building server side software.
+
+The Sirel PHP library depends on bash and many standard 
+Linux/BSD tools, i.e. it might run under CygWin,
+but it is practically never tested on Windows.
+
+---------------------------------------------------------------------------
+                            W A R N I N G ! ! !
+---------------------------------------------------------------------------
+
+    Sub-parts of it are pretty tried and tested and I as the
+    original author of this library have been using it for production,
+    but the whole library needs HEAVY REFACTORING and
+    one really needs to know one's way around the library to use it.
+
+    I do not promise that You will not run into trouble, if You
+    use this library, despite the fact that it's the main PHP library
+    that I use for all of my PHP projects.
+
+---------------------------------------------------------------------------
+                             Introduction
+---------------------------------------------------------------------------
+
+The Sirel PHP Library is a mixture of PHP5 subroutines/classes that are
+meant to facilitate the writing of web applications.
+
+To use the whole library, one should "require_once" the
+
+    ./src/devel/src/sirel.php.
+
+Each of the Sirel PHP Library files includes, "requires once",
+all of the other Sirel PHP Library files that it depends on.
+That makes it possible to use the library by "requiring once" only
+the files that one finds necessary.
+
+Code examples are provided in a form of small demo-applications that
+reside in ./doc/examples
+
+---------------------------------------------------------------------------
+                              Dependencies
+---------------------------------------------------------------------------
+Mandatory dependencies for client code:
+
+        - The Sirel PHP library has been written in PHP 5.2, but it
+          runs also on PHP 5.3 and in the future support for PHP 5.2
+          will be dropped.
+
+        - The PHP mbstring extension.
+              The sirel_core.php switches the internal string
+              representation to UTF-8 and all of the library
+              source relies on an assumption that the internal
+              string representation is UTF-8.
+
+        - The PHP GNU Multiple Precision extension (GMP extension).
+
+Optional dependencies for client code:
+
+        - Memcached support.
+
+
+Dependencies for developing (modifying) the Sirel PHP library:
+
+        - Ruby 1.9.x or newer (http://ruby-lang.org/ )
+
+        - mmmv_devel_tools (https://github.com/martinvahi/mmmv_devel_tools )
+
+        - Linux, because all of the code generation scripts are
+          Linux specific.
+
+        - Optionally NetBeans version 6.8, because later versions of NetBeans
+          have a code formatter that spoils the Sirel PHP library code by
+          placing all single line comments that
+          follow a curly closing brace to a new line.
+          Explanation by an example:
+
+                  } // function_name_as_a_comment
+
+                  becomes
+
+                  }
+                  // function_name_as_a_comment
+
+          A Linux version of the NetBeans 6.8 binary resides
+          in the ./attic/netbeans_6_8
+
+          A historical side note (written in December 2012):
+                  the NetBeans version 6.8 seems to be the
+                  last version that got published under the Sun Microsystems.
+                  The NetBeans 6.9 seems to be already released under
+                  the Oracle, which acquired the Sun Microsystems.
+                  There have been rumors on the net that the Oracle
+                  crippled many of the original developers salaries,
+                  causing many former Sun Microsystems developers
+                  leave the company, the Oracle.
+
+                  As of NetBeans version 7.2.1 the PHP formatting
+                  bug has still not been fixed, although the
+                  JavaScript part of the NetBeans 7.2.1 seems to be
+                  more advanced and stable than in the NetBeans 6.8.
+
+
+Third party libraries that the Sirel PHP library depends on and contains:
+
+        - spyc library (http://code.google.com/p/spyc/ ),
+          which provides YAML (http://www.yaml.org/ ) support.
+
+In order to use the Sirel, it is necessary to add some configuration
+code to one's PHP-souce. For example, one has to furnish sirel with the
+database username and password.
+
+Some projects that depend on Sirel depend on the environment variable
+SIREL_HOME, which is meant to hold a full path to the folder that
+contains the ./COMMENTS.txt that You are currently reading.
+
+---------------------------------------------------------------------------
+                       Some of the Files in the ./src/devel/src
+---------------------------------------------------------------------------
+
+sirel.php         --- An inclusion file for client applications that want
+                      to use the whole library. This file should NOT
+                      be "included" ("required once") by any of the sirel's
+                      own files. It contains a description of sirel
+                      file dependencies.
+
+sirel_core.php    --- The core of the sirel library. All other sirel
+                      library PHP-files depend on that file.
+
+sirel_lang.php    --- Mainly type verification routines and string
+                      operations, but it also deals with Memcached daemon.
+
+sirel_db.php      --- Database engine abstraction. It provides an SQL
+                      interface that does not depend on any of the
+                      supported database engines.
+                          The idea is that if one
+                      wants to port the web-application from one database
+                      engine to another, one just updates the database
+                      engine name, port and password in the config file
+                      and everything just runs fluently. Even data types
+                      are abstracted away, because different database
+                      engines use slightly different type names. :-)
+
+sirel_dbcomm.php  --- Higher level database access abstraction than
+                      the sirel_db.php. The sirel_db.php
+                      abstracted away the database engine specific issues,
+                      but sirel_dbcomm.php depends on the sirel_db.php
+                      and implements an interface, where the
+                      SQL statements are assembled automatically
+                      from hashtables.
+
+sirel_resource.php--- Routines that are related to user interface media.
+                      For example user interface messages, menu item
+                      names in different languages, etc.
+
+sirel_security.php--- It does not deal with only crypto related issues.
+
+sirel_html.php    --- Provides a class, sirelHTMLPage,
+                      that has a method "to_s()", which prints out
+                      a string representation of a HTML page. Different
+                      regions of the HTML page are public
+                      fields of the class sirelHTMLPage.
+
+sirel_operators.php ---
+                      Set of functions that mimic the idea behind
+                      the C++ operators. The main feature, benefit,
+                      of those functions is that the function that
+                      is used for the operator is chosen dynamically
+                      according to the types of the operands.
+                      This file also contains an enhanced version of
+                      the classical MAP function. The implementation
+                      entry point is a function named "func_sirel_map".
+
+sirel_raudrohi_support.php ---
+                      Convenience code for applications that use
+                      the Raudrohi JavaScript Library.
+
+sirel_request_handling.php ---
+                      Some rather high-level stuff that
+                      does not seem to fit anywhere else.
+
+---------------------------------------------------------------------------
+
+
+==========================================================================
