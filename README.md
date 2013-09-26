@@ -12,6 +12,9 @@ stand-alone applications.
 wappskafander_t2 is POSIX-specific and will probably never be
 supported on Windows.
 
+Project home:
+
+http://technology.softf1.com/wappskafander_t2/
 
 
 ---------------------------------------------------------------------------
@@ -84,7 +87,7 @@ All comments for developers reside at
 The name and project, wappskafander_t2, is a succession of
 the project wappskafander_t1
 
-    http://technology.softf1.com/wappskafander_t1/
+http://technology.softf1.com/wappskafander_t1/
 
 , which is meant for running Java servlets in stead of PHP applications.
 
