@@ -91,6 +91,16 @@ http://technology.softf1.com/wappskafander_t1/
 
 , which is meant for running Java servlets in stead of PHP applications.
 
+The PHP interpreter does come with its own, built-in, web
+server, but in September 2013 the
+
+http://php.net/manual/en/features.commandline.webserver.php
+
+reads:
+
+    "This web server is designed for developmental purposes only, and 
+    should not be used in production.
+    Requests are served sequentially."
 
 ---------------------------------------------------------------------------
 ##                     License (The BSD License)
