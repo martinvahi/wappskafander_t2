@@ -1,0 +1,17 @@
+
+The core development file, the 
+
+    ./wappskafander_t2_logo_development_version.svg
+
+has been created with Inkscape.
+The colors of the logo are transparent and blue(#262eb0).
+The png and jpeg files have been created from
+
+    ./wappskafander_t2_logo.svg  
+
+by using GIMP.
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sirel Example 03</title>
+    <style type="text/css">
+        body {
+            margin: 20;
+            padding: 0;
+        }
+    </style>
+</head>
+<body id="the_document_body" class="yui-skin-sam">
+<br/>
+
+<h1>Sirel Example 03</h1>
+
+<p>
+    The purpose of this example is to demonstrate, how
+    the <a href="http://technology.softf1.com/sirel/">Sirel PHP library</a>
+    facilitates the use of PHP in a role of an entry point
+    to a non-interactive text/file processing console application.
+    <br/><br/>
+    The motivation for using PHP as an entry point is to
+    allow the console application to be used on a
+    commonly affordable web-hosting service that supports
+    PHP and does not allow its clients to run their own
+    web servers.
+    <br/><br/>
+    The benefit of using PHP as an entry point
+    in stead of writing the console application as a CGI program
+    is that the PHP interpreter handles all of the
+    CGI/web-server-interface related parts and allows the
+    development of the console application to be focused on
+    application specific text/file processing.
+</p>
+<br/>
+
+<form method="POST" action="./action.php">
+    <textarea cols="50" rows="3"></textarea>
+    <input type="submit" value="Send Text 2 Server by POST"/>
+</form>
+<br/><br/><br/><br/>
+
+<form method="GET" action="./action.php">
+    <textarea cols="50" rows="3"></textarea>
+    <input type="submit" value="Send Text 2 Server by GET"/>
+</form>
+<br/><br/><br/><br/>
+
+<form method="POST" enctype="multipart/form-data" action="./action.php">
+    <input type="file" name="sirel_form_file_field" >
+    <input type="submit" value="Send File 2 Server by POST">
+</form>
+<br/><br/><br/><br/>
+</body>
+</html>

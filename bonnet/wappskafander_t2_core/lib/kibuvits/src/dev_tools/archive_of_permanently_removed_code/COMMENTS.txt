@@ -1,0 +1,24 @@
+===========================================================================
+=============  Archive of Permanently Removed Legacy code  ================
+===========================================================================
+
+This folder contains code that was in use and probably even complete, but
+that has become hopelessly deprecated.
+
+It's stored here to allow some copy-pasting in case it turns out that
+it was a mistake to refactor that code out.
+
+One might argue that all code remains available in code repositories,
+but the existence of this folder is justified by the fact that
+it might be difficult to find the latest revision that contained
+the code.
+
+The selftests of the legacy code are not run and are not expected to pass.
+
+---------------------------------------------------------------------------
+                       Deprecation Reasons
+---------------------------------------------------------------------------
+
+Nothing here yet.
+
+===========================================================================

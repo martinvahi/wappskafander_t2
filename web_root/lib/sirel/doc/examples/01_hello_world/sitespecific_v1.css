@@ -1,0 +1,9 @@
+/* A reminder: JavaScript files and CSS files get cached, which means
+that one has to update their names every time one uptates web software.
+One way to implement the renaming is to incude a file version into the
+name of the file. That explains, why this file is renamed "sitespecific_v1.css"
+in stead of just "sitespecific.css".*/
+
+p{
+	font-family:monospace;
+}

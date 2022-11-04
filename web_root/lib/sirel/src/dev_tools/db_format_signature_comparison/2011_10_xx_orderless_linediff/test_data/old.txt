@@ -1,0 +1,7 @@
+This line is common in both, new.txt and old.txt  Giraffe.
+This line is common in both, new.txt and old.txt  Hippo.
+This line is present only in the old.txt. Ostrich.
+This line is common in both, new.txt and old.txt  Crocodile
+This line is present only in the old.txt. Brontosaurus.
+This line is present only in the old.txt. Hen.
+This line is common in both, new.txt and old.txt  Elephant.

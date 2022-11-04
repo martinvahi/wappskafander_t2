@@ -1,0 +1,45 @@
+===========================================================================
+==============  wappskafander_t2 Development Documentation  ===============
+===========================================================================
+
+It's so small project that this COMMENTS.txt really captures the whole
+developer targeted documentation.
+
+The point of entry to all scripts, etc., is
+
+    <project_root>/bin/start_or_restart_server.bash
+
+, which calls the
+
+    <project_root>/bonnet/wappskafander_t2_core/script_components/engine.rb
+
+multiple times with different console arguments. The 
+engine.rb reads in the 
+
+    <project_root>/etc/wappskafander_t2_configuration.bash
+
+, studies the system a bit and returns some values to 
+stdout (i.e. the console) or generates some files.
+
+
+---------------------------------------------------------------------------
+                       Alternative Components
+---------------------------------------------------------------------------
+
+The current wappskafander_t2 is buit by using the 
+
+    http://www.hiawatha-webserver.org/
+
+as its core web server. The choice is a bit random and 
+
+    http://cherokee-project.com/
+
+might be used instead. 
+
+The reason, why the Hiawatha won is that
+the wappskafander_t2 is meant to be a pretty maintanence free
+project and security is a component of reliability, 
+which contributes to the decrase of maintanence.
+
+
+===========================================================================
