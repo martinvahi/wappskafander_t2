@@ -1,5 +1,22 @@
-#                         wappskafander_t2
+#   2023_07_26 bitrotting copy of the years old wappskafander_t2 project
 ===========================================================================
+
+Excuse for letting it bitrot: 
+    it usually works and should be replace with some much newer 
+    implementaton anyway, so there is no point of investing any
+    time on rewriting this old project. At the same time, it can
+    still be used in many cases the way it is, provided that
+    one does not waste time on looking at the ./bonnet or any
+    of the scripts.
+ 
+IF there are any updates to this project, then they MIGHT be available
+at those accounts:
+
+    https://github.com/martinvahi/wappskafander_t2
+    https://sourceforge.net/projects/wappskafander-t2/
+
+
+---------start--of--the--original--README.md-------------------------------
 
 The name, "wappskafander_t2" is a made up word that is derived from
 "web application", "skafander", "type 2", where the "skafander"

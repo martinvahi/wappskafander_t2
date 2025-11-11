@@ -7,6 +7,7 @@ require "pathname"
 
 ob_pth_0=Pathname.new(__FILE__).realpath
 s_fp_core=ob_pth_0.parent.parent.to_s
+require(s_fp_core+"/lib/Ruby_v_3_4_1_backwards_compatibility_with_v_2_4_0_t1.rb")
 require(s_fp_core+"/lib/kibuvits/src/include/kibuvits_fs.rb")
 require(s_fp_core+"/lib/kibuvits/src/include/kibuvits_shell.rb")
 WAPPSKAFANDER_T2_VERSION="1.0.0"
@@ -72,7 +73,7 @@ def s_get_PHP_FastCGI_params(s_param_name,s_project_config)
       s_out=@s_get_PHP_FastCGI_params_cache_port
    else
       kibuvits_throw("s_param_name=="+s_param_name+
-      "\n GUID='81cea621-f6f2-4cdd-94e3-c0237030b6e7'\n\n")
+      "\n GUID='3f4633f2-53ba-4cb5-b8c1-a2e1a0c129e7'\n\n")
    end # case s_param_name
    return s_out
 
@@ -115,7 +116,7 @@ def gen_http_error_pages(s_project_config,s_fp_web_server,s_fp_web_root)
          "\nAn example: template_503.html "+
          "\n"+
          "\n s_fp_origin=="+s_fp_origin+
-         "\n\n GUID='e30d878a-055a-4a71-9de3-c0237030b6e7'\n\n")
+         "\n\n GUID='5481c7b1-61ae-4953-a851-a2e1a0c129e7'\n\n")
       end # if
       s_dest_file_name=md[0]
       s_fp_destination=s_fp_err_folder+$kibuvits_lc_slash+s_dest_file_name
